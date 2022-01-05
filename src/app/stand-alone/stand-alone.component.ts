@@ -9,23 +9,33 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 export class StandAloneComponent implements OnInit {
   public dateTime3: Date[];
   //0 - jan , 11-dec
-  public min = new Date(2021, 1, 12);
-  public max = new Date(2021, 2, 30);
+  public min = new Date(2021, 0, 1);
+  public max = new Date(2021, 0, 20);
 
-  handleClick(event) {
-    console.log(event);
-    if (event === 'today') {
-      let selectedDate = [];
-      let startDate = new Date();
-      let endDate = new Date();
-      selectedDate.push(startDate);
-      selectedDate.push(endDate);
-      this.dateTime3.push(selectedDate);
-      console.log('date', selectedDate, dateTime3);
-    }
+  handleSelect(event) {
+    console.log('select', event);
   }
   handleCalendar(value) {
-    console.log(value);
+    const date = new Date();
+    if (value == 'today') {
+      this.dateTime3 = [
+        date,
+        new Date(date.getFullYear(), date.getMonth(), date.getDate()),
+      ];
+      console.log('today', this.dateTime3);
+    } else if (value == 'week') {
+      this.dateTime3 = [
+        date,
+        new Date(date.getFullYear(), date.getMonth(), date.getDate() + 7),
+      ];
+      console.log('week', this.dateTime3);
+    } else if (value == 'month') {
+      this.dateTime3 = [
+        date,
+        new Date(date.getFullYear(), date.getMonth(), date.getDate() + 31),
+      ];
+      console.log('month', this.dateTime3);
+    }
   }
   constructor() {}
 

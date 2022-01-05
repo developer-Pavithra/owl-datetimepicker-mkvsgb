@@ -1,5 +1,5 @@
 <div class="example-wrapper">
-  <h2>Calendar Only</h2>
+  <h2>Calendar</h2>
   <!-- 
     <label class="example-input-wrapper">
         Date:
@@ -26,9 +26,11 @@
     <h4>Value From Picker: {{dateTime2}}</h4>
 </div> -->
 
-  <div class="example-wrapper">
-    <h2>Picker as Inline Element</h2>
+  <button value="today" (click)="handleCalendar('today')">Today</button>
+  <button value="week" (click)="handleCalendar('week')">Week</button>
+  <button value="month" (click)="handleCalendar('month')">Month</button>
 
+  <div class="example-wrapper">
     <owl-date-time-inline
       (ngModelChange)="handleClick($event)"
       [min]="min"

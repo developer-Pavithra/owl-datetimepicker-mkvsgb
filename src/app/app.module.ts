@@ -14,36 +14,34 @@ import { LocalizationComponent } from './localization/localization.component';
 import { MomentJsComponent } from './moment-js/moment-js.component';
 import { CustomFormatComponent } from './custom-format/custom-format.component';
 import { YearMonthComponent } from './year-month/year-month.component';
-import {ReaciveComponent } from './reacive/reacive.component.ts';
+import { ReaciveComponent } from './reacive/reacive.component.ts';
 
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        BasicComponent,
-        StandAloneComponent,
-        RangeComponent,
-        StartViewComponent,
-        ValidationComponent,
-        RestrictionComponent,
-        LocalizationComponent,
-        MomentJsComponent,
-        CustomFormatComponent,
-        YearMonthComponent,
-        ReaciveComponent
-    ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        ReactiveFormsModule,
-        FormsModule,
-
-        OwlDateTimeModule,
-        OwlNativeDateTimeModule,
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    BasicComponent,
+    StandAloneComponent,
+    RangeComponent,
+    StartViewComponent,
+    ValidationComponent,
+    RestrictionComponent,
+    LocalizationComponent,
+    MomentJsComponent,
+    CustomFormatComponent,
+    YearMonthComponent,
+    ReaciveComponent,
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}
